@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#153747">
+
+<title>Fisioterapia Respiratoria | TECBA</title>
+
+<style>
+:root {
+    --azul: #153747;
+    --azul2: #24576a;
+    --turquesa: #37a6a2;
+    --coral: #ed784b;
+    --fondo: #f2f7f7;
+    --blanco: #ffffff;
+    --texto: #30434a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+/* ENCABEZADO INSTITUCIONAL */
+
+header {
+    background: var(--azul);
+    color: white;
+    padding: 25px 6%;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    border-bottom: 5px solid var(--turquesa);
+}
+
+.logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: white;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.institucion h2 {
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.institucion p {
+    font-size: 13px;
+    color: #d9e6eb;
+}
+
+/* PORTADA */
+
+.portada {
+    background: linear-gradient(135deg, #153747, #287b80);
+    color: white;
+    text-align: center;
+    padding: 80px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #a8f0e8;
+    background: rgba(55,166,162,.18);
+    border: 1px solid var(--turquesa);
+    padding: 7px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.portada h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 17px;
+    color: #e0eeee;
+}
+
+/* CONTENEDOR */
+
+.contenedor {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 22px;
+}
+
+.seccion {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(21,55,71,.06);
+}
+
+.numero {
+    color: var(--turquesa);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.titulo {
+    color: var(--azul);
+    font-size: 27px;
+    margin: 5px 0 17px;
+}
+
+.subtitulo {
+    display: inline-block;
+    background: #e6f5f3;
+    color: #237e7b;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: var(--azul);
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 13px;
+}
+
+/* INFORMACIÓN DE LA TÉCNICA */
+
+.informacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.info-card {
+    background: #f2f8f8;
+    padding: 23px;
+    border-radius: 12px;
+    border-left: 4px solid var(--turquesa);
+}
+
+.info-card h3 {
+    font-size: 17px;
+}
+
+/* INSTRUCCIONES */
+
+.pasos {
+    margin-top: 25px;
+}
+
+.paso {
+    display: flex;
+    gap: 17px;
+    padding: 20px;
+    background: #f6f9f9;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+}
+
+.paso-numero {
+    min-width: 40px;
+    height: 40px;
+    background: var(--turquesa);
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.paso h3 {
+    font-size: 17px;
+}
+
+/* IMÁGENES */
+
+.imagen-tecnica {
+    margin-top: 28px;
+    background: #f4f8f8;
+    border-radius: 14px;
+    padding: 15px;
+    text-align: center;
+}
+
+.imagen-tecnica img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    max-height: 550px;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.pie-imagen {
+    color: #668087;
+    font-size: 13px;
+    margin: 12px 0 0;
+}
+
+/* AVISO */
+
+.aviso {
+    background: #e9f6f4;
+    border-left: 5px solid var(--turquesa);
+    border-radius: 10px;
+    padding: 23px;
+    margin-top: 25px;
+}
+
+.aviso h3 {
+    color: #237e7b;
+}
+
+/* CIERRE */
+
+.cierre {
+    background: linear-gradient(135deg, #153747, #287b80);
+    color: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cierre h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.cierre p {
+    color: #e0eeee;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 5px solid var(--turquesa);
+    font-size: 14px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px;
+        gap: 13px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .institucion h2 {
+        font-size: 17px;
+    }
+
+    .portada {
+        padding: 55px 22px;
+    }
+
+    .portada p {
+        font-size: 15px;
+    }
+
+    .contenedor {
+        margin: 22px auto;
+        padding: 0 13px;
+    }
+
+    .seccion {
+        padding: 23px 18px;
+    }
+
+    .titulo {
+        font-size: 23px;
+    }
+
+    .informacion {
+        grid-template-columns: 1fr;
+    }
+
+    .paso {
+        padding: 16px;
+    }
+
+    .imagen-tecnica {
+        padding: 8px;
+    }
+
+    .imagen-tecnica img {
+        max-height: none;
+    }
+
+    .cierre {
+        padding: 25px 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .institucion h2 {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+
+<header>
+    <img src="TECBA.png"
+         alt="Logotipo del Tecnológico Boliviano Alemán"
+         class="logo">
+
+    <div class="institucion">
+        <h2>TECNOLÓGICO BOLIVIANO ALEMÁN</h2>
+        <p>Formación técnica y tecnológica</p>
+    </div>
+</header>
+
+<!-- PORTADA -->
+
+<section class="portada">
+    <span class="etiqueta">GUÍA VISUAL DE SALUD</span>
+
+    <h1>FISIOTERAPIA RESPIRATORIA</h1>
+
+    <p>
+        Optimización de la Ventilación Pulmonar
+        y Prevención de Complicaciones
+    </p>
+</section>
+
+<main class="contenedor">
+
+<!-- INTRODUCCIÓN -->
+
+<section class="seccion">
+
+    <span class="numero">GUÍA EDUCATIVA</span>
+
+    <h2 class="titulo">
+        Ejercicios Principales de Reeducación Respiratoria
+    </h2>
+
+    <p>
+        La fisioterapia respiratoria comprende técnicas que
+        buscan mejorar el patrón ventilatorio, favorecer
+        la movilidad torácica y optimizar la respiración.
+    </p>
+
+    <div class="aviso">
+        <h3>IMPORTANTE</h3>
+        <p>
+            Esta guía tiene fines educativos. La selección,
+            indicación y realización de los ejercicios debe
+            adaptarse a las condiciones de cada persona y
+            seguir las recomendaciones de un profesional de salud.
+        </p>
+    </div>
+
+</section>
+
+<!-- TÉCNICA 1 -->
+
+<section class="seccion">
+
+    <span class="numero">TÉCNICA 01</span>
+
+    <h2 class="titulo">
+        Respiración Diafragmática (Abdominal)
+    </h2>
+
+    <span class="subtitulo">REEDUCACIÓN MUSCULAR</span>
+
+    <div class="informacion">
+
+        <article class="info-card">
+            <h3>Objetivo fisiológico</h3>
+
+            <p>
+                Maximizar la excursión diafragmática,
+                reducir la ventilación del espacio muerto
+                y optimizar las bases pulmonares.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h3>Indicaciones</h3>
+
+            <p>
+                Patrones respiratorios superficiales,
+                disnea, retención de aire y periodos posoperatorios.
+            </p>
+        </article>
+
+    </div>
+
+    <h3>Instrucciones paso a paso</h3>
+
+    <div class="pasos">
+
+        <article class="paso">
+            <div class="paso-numero">1</div>
+
+            <div>
+                <h3>Posición inicial</h3>
+
+                <p>
+                    Siéntese de forma erguida con la espalda
+                    apoyada o adopte la posición de decúbito supino.
+                    Coloque una mano sobre el pecho y otra sobre
+                    el abdomen.
+                </p>
+            </div>
+        </article>
+
+        <article class="paso">
+            <div class="paso-numero">2</div>
+
+            <div>
+                <h3>Inhalación activa</h3>
+
+                <p>
+                    Inhale suave y profundamente por la nariz
+                    durante 2-3 segundos, permitiendo que el
+                    abdomen se expanda hacia afuera sin mover el pecho.
+                </p>
+            </div>
+        </article>
+
+        <article class="paso">
+            <div class="paso-numero">3</div>
+
+            <div>
+                <h3>Exhalación pasiva</h3>
+
+                <p>
+                    Expulse el aire lentamente por la boca
+                    en 3-4 segundos mientras el abdomen
+                    desciende libremente.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- IMAGEN TÉCNICA 1 -->
+
+    <div class="imagen-tecnica">
+
+        <img src="RESPIRA1.png"
+             alt="Ilustración de respiración diafragmática">
+
+        <p class="pie-imagen">
+            Técnica 1 · Respiración diafragmática
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TÉCNICA 2 -->
+
+<section class="seccion">
+
+    <span class="numero">TÉCNICA 02</span>
+
+    <h2 class="titulo">
+        Respiración con Labios Fruncidos
+    </h2>
+
+    <span class="subtitulo">CONTROL DE FLUJO / PEEP</span>
+
+    <div class="informacion">
+
+        <article class="info-card">
+            <h3>Objetivo fisiológico</h3>
+
+            <p>
+                Generar presión positiva en la vía aérea
+                (PEEP intrínseca), previniendo el colapso
+                bronquial espiratorio y mejorando el
+                vaciado alveolar.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h3>Indicaciones</h3>
+
+            <p>
+                Manejo inmediato de la disnea, atrapamiento
+                aéreo, colapso de vías aéreas pequeñas y
+                sensación de falta de aire.
+            </p>
+        </article>
+
+    </div>
+
+    <h3>Instrucciones paso a paso</h3>
+
+    <div class="pasos">
+
+        <article class="paso">
+            <div class="paso-numero">1</div>
+
+            <div>
+                <h3>Inspiración relajada</h3>
+
+                <p>
+                    Inhale lentamente por la nariz en 2 tiempos
+                    (2 segundos), con la boca cerrada y los
+                    hombros completamente relajados.
+                </p>
+            </div>
+        </article>
+
+        <article class="paso">
+            <div class="paso-numero">2</div>
+
+            <div>
+                <h3>Ajuste labial</h3>
+
+                <p>
+                    Frunza los labios manteniendo una pequeña
+                    abertura central, como si fuera a soplar
+                    una vela o silbar.
+                </p>
+            </div>
+        </article>
+
+        <article class="paso">
+            <div class="paso-numero">3</div>
+
+            <div>
+                <h3>Espiración prolongada y controlada</h3>
+
+                <p>
+                    Expulse el aire de forma suave, continua
+                    y sin forzar durante 4 tiempos
+                    (4 segundos, el doble de la inhalación).
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- IMAGEN TÉCNICA 2 -->
+
+    <div class="imagen-tecnica">
+
+        <img src="RESPIRA2.png"
+             alt="Ilustración de respiración con labios fruncidos">
+
+        <p class="pie-imagen">
+            Técnica 2 · Respiración con labios fruncidos
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TÉCNICA 3 -->
+
+<section class="seccion">
+
+    <span class="numero">TÉCNICA 03</span>
+
+    <h2 class="titulo">
+        Ejercicios de Expansión Torácica (Reclutamiento)
+    </h2>
+
+    <span class="subtitulo">VOLUMEN Y MOVILIDAD</span>
+
+    <div class="informacion">
+
+        <article class="info-card">
+            <h3>Objetivo fisiológico</h3>
+
+            <p>
+                Aumentar el volumen corriente, activar
+                la ventilación colateral (poros de Kohn)
+                y prevenir la atelectasia.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h3>Indicaciones</h3>
+
+            <p>
+                Restricción de la expansión de la pared torácica,
+                hipoventilación regional y periodos posquirúrgicos.
+            </p>
+        </article>
+
+    </div>
+
+    <h3>Instrucciones paso a paso</h3>
+
+    <div class="pasos">
+
+        <article class="paso">
+            <div class="paso-numero">1</div>
+
+            <div>
+                <h3>Posicionamiento costal</h3>
+
+                <p>
+                    Sitúe las manos sobre la región lateral
+                    de las costillas inferiores.
+                </p>
+            </div>
+        </article>
+
+        <article class="paso">
+            <div class="paso-numero">2</div>
+
+            <div>
+                <h3>Inspiración guiada</h3>
+
+                <p>
+                    Inhale profundamente expandiendo lateralmente
+                    las costillas contra la ligera resistencia
+                    de sus manos.
+                </p>
+            </div>
+        </article>
+
+        <article class="paso">
+            <div class="paso-numero">3</div>
+
+            <div>
+                <h3>Pausa inspiratoria</h3>
+
+                <p>
+                    Sostenga el aire al final de la inhalación
+                    durante 2 a 3 segundos (apnea inspiratoria).
+                </p>
+            </div>
+        </article>
+
+        <article class="paso">
+            <div class="paso-numero">4</div>
+
+            <div>
+                <h3>Espiración</h3>
+
+                <p>
+                    Suelte el aire de forma pasiva y uniforme
+                    por la boca.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- IMAGEN TÉCNICA 3 -->
+
+    <div class="imagen-tecnica">
+
+        <img src="RESPIRA3.png"
+             alt="Ilustración de ejercicios de expansión torácica">
+
+        <p class="pie-imagen">
+            Técnica 3 · Ejercicios de expansión torácica
+        </p>
+
+    </div>
+
+</section>
+
+<!-- RECOMENDACIONES FINALES -->
+
+<section class="seccion">
+
+    <span class="numero">RECOMENDACIONES</span>
+
+    <h2 class="titulo">
+        Cuidados durante la práctica
+    </h2>
+
+    <div class="informacion">
+
+        <article class="info-card">
+            <h3>Postura adecuada</h3>
+            <p>
+                Mantenga una posición cómoda y evite
+                tensiones innecesarias en hombros y cuello.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h3>Respiración controlada</h3>
+            <p>
+                Realice los movimientos respiratorios
+                suavemente, sin forzar la entrada o salida del aire.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h3>Atención a los síntomas</h3>
+            <p>
+                Suspenda el ejercicio si presenta mareo,
+                dolor torácico o aumento de la dificultad respiratoria.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h3>Orientación profesional</h3>
+            <p>
+                Adapte las técnicas a las indicaciones
+                del profesional de salud.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CIERRE -->
+
+<section class="cierre">
+
+    <h2>RESPIRAR MEJOR ES CUIDAR TU SALUD</h2>
+
+    <p>
+        La educación respiratoria y la aplicación adecuada
+        de las técnicas contribuyen al cuidado de la función
+        pulmonar y al bienestar de las personas.
+    </p>
+
+</section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+
+    <h3 style="color:white;">
+        TECNOLÓGICO BOLIVIANO ALEMÁN
+    </h3>
+
+    <p>Formación técnica y tecnológica</p>
+
+    <p>Guía visual de fisioterapia respiratoria</p>
+
+</footer>
+
+</body>
+</html>
